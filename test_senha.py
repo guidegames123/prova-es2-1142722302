@@ -17,3 +17,9 @@ def test_senha_vazia_e_rejeitada():
     senha = ""
     resultado = senha_valida(senha)
     assert resultado is False
+
+
+def test_senha_so_com_espacos_e_rejeitada():
+    senha = " " * 10  # 8 espacos mais 2, nada alem de espacos
+    resultado = senha_valida(senha)
+    assert resultado is False
